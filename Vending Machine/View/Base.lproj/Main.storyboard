@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Vending_Machine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vending-machine" translatesAutoresizingMaskIntoConstraints="NO" id="hYf-Dv-fRg">
+                                <rect key="frame" x="30" y="320" width="354" height="256"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVU-KJ-nXh">
+                                <rect key="frame" x="40" y="586.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Xe2-Pa-Vg6"/>
+                                    <constraint firstAttribute="height" constant="100" id="bLl-Fo-aJd"/>
+                                </constraints>
+                                <state key="normal" title="Button1" image="dollar"/>
+                                <connections>
+                                    <action selector="moneyRecieved:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ta4-BS-11P"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCM-na-TJG">
+                                <rect key="frame" x="167" y="586" width="80.5" height="41"/>
+                                <color key="backgroundColor" red="0.63921568630000003" green="0.96862745100000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVp-lf-g78">
+                                <rect key="frame" x="247" y="616" width="147" height="41"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.61960784310000006" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Claim Change">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="claimChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqS-0t-P4m"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA8-hk-Sjc">
+                                <rect key="frame" x="167" y="657" width="80.5" height="41"/>
+                                <color key="backgroundColor" red="0.63921568630000003" green="0.96862745100000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="H8o-4w-QMt">
+                                <rect key="frame" x="68.5" y="54" width="277" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzj-wA-a3V">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="36"/>
+                                        <color key="backgroundColor" red="1" green="0.92156862750000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Select1">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tu1-hu-6VN">
+                                        <rect key="frame" x="70" y="0.0" width="67" height="36"/>
+                                        <color key="backgroundColor" red="1" green="0.92156862750000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Select2">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEj-Vo-43q">
+                                        <rect key="frame" x="140" y="0.0" width="67" height="36"/>
+                                        <color key="backgroundColor" red="1" green="0.92156862750000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Select3">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEE-tb-rxo">
+                                        <rect key="frame" x="210" y="0.0" width="67" height="36"/>
+                                        <color key="backgroundColor" red="1" green="0.92156862750000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Select4">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="M1z-5b-hvQ">
+                                <rect key="frame" x="68.5" y="100" width="277" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdo-aW-TWG">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="36"/>
+                                        <color key="backgroundColor" red="1" green="0.92156862750000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Select5">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyg-Wd-3jf">
+                                        <rect key="frame" x="70" y="0.0" width="67" height="36"/>
+                                        <color key="backgroundColor" red="1" green="0.92156862750000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Select6">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPs-61-3cR">
+                                        <rect key="frame" x="140" y="0.0" width="67" height="36"/>
+                                        <color key="backgroundColor" red="1" green="0.92156862750000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Select7">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xs-2C-B6w">
+                                        <rect key="frame" x="210" y="0.0" width="67" height="36"/>
+                                        <color key="backgroundColor" red="1" green="0.92156862750000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Select8">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vA8-hk-Sjc" firstAttribute="centerX" secondItem="hYf-Dv-fRg" secondAttribute="centerX" id="0wd-vQ-tgr"/>
+                            <constraint firstItem="fCM-na-TJG" firstAttribute="centerX" secondItem="hYf-Dv-fRg" secondAttribute="centerX" id="6XK-t3-s4A"/>
+                            <constraint firstItem="H8o-4w-QMt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="A6x-eF-gUB"/>
+                            <constraint firstItem="H8o-4w-QMt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hrm-5k-cTh"/>
+                            <constraint firstAttribute="trailing" secondItem="hYf-Dv-fRg" secondAttribute="trailing" constant="30" id="HxY-j4-L0k"/>
+                            <constraint firstItem="H8o-4w-QMt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hys-pJ-irZ"/>
+                            <constraint firstItem="hVp-lf-g78" firstAttribute="top" secondItem="hYf-Dv-fRg" secondAttribute="bottom" constant="40" id="Obn-Fl-6C0"/>
+                            <constraint firstItem="hYf-Dv-fRg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WXa-KW-5Ph"/>
+                            <constraint firstItem="M1z-5b-hvQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aOF-gh-HXj"/>
+                            <constraint firstItem="xVU-KJ-nXh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="d2q-fb-n6q"/>
+                            <constraint firstItem="hVp-lf-g78" firstAttribute="centerY" secondItem="xVU-KJ-nXh" secondAttribute="centerY" id="eim-zk-KhP"/>
+                            <constraint firstItem="M1z-5b-hvQ" firstAttribute="top" secondItem="H8o-4w-QMt" secondAttribute="bottom" constant="10" id="geI-A1-k0X"/>
+                            <constraint firstItem="fCM-na-TJG" firstAttribute="top" secondItem="hYf-Dv-fRg" secondAttribute="bottom" constant="10" id="gpT-0d-wPF"/>
+                            <constraint firstItem="vA8-hk-Sjc" firstAttribute="top" secondItem="fCM-na-TJG" secondAttribute="bottom" constant="30" id="nmB-Ja-cpU"/>
+                            <constraint firstItem="hYf-Dv-fRg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="oN5-9U-uNf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hVp-lf-g78" secondAttribute="trailing" constant="20" id="xeD-70-55E"/>
+                            <constraint firstItem="hYf-Dv-fRg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zQd-9W-rJu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="changeLbl" destination="vA8-hk-Sjc" id="sBz-7k-kDk"/>
+                        <outlet property="moneyRecievedLbl" destination="fCM-na-TJG" id="3PT-ms-mVm"/>
+                        <outlet property="selectBtn1" destination="zzj-wA-a3V" id="NOR-fu-8bj"/>
+                        <outlet property="selectBtn2" destination="Tu1-hu-6VN" id="cJA-BF-vc2"/>
+                        <outlet property="selectBtn3" destination="dEj-Vo-43q" id="AP3-xB-5Zc"/>
+                        <outlet property="selectBtn4" destination="VEE-tb-rxo" id="sXJ-S7-vSt"/>
+                        <outlet property="selectBtn5" destination="vdo-aW-TWG" id="wBd-eD-HyB"/>
+                        <outlet property="selectBtn6" destination="Hyg-Wd-3jf" id="A7t-7U-4vV"/>
+                        <outlet property="selectBtn7" destination="UPs-61-3cR" id="1ah-lk-V33"/>
+                        <outlet property="selectBtn8" destination="3xs-2C-B6w" id="QJh-5h-Ouz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dollar" width="256" height="256"/>
+        <image name="vending-machine" width="256" height="256"/>
+    </resources>
+</document>
