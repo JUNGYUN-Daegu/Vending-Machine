@@ -10,23 +10,28 @@ import Foundation
 
 struct BeverageStock {
     
-    var beverage1 = Beverage(BeverageName: "Cola", Price: 1000, Count: 20)
-    var beverage2 = Beverage(BeverageName: "Fanta", Price: 1000, Count: 20)
-    var beverage3 = Beverage(BeverageName: "Cider", Price: 1200, Count: 20)
-    var beverage4 = Beverage(BeverageName: "Ambasa", Price: 1200, Count: 20)
-    var beverage5 = Beverage(BeverageName: "SikHye", Price: 1400, Count: 20)
-    var beverage6 = Beverage(BeverageName: "PowerPoint",Price: 3000, Count: 20)
-    var beverage7 = Beverage(BeverageName: "Excel",Price: 9000, Count: 20)
-    var beverage8 = Beverage(BeverageName: "Access", Price: 9000, Count: 20)
+    var initialMoney = 1000000
+    var basicCount = 20
+    
+    var beverages = [Beverage(BeverageName: "Cola", Price: 1000, Count: 20),
+                     Beverage(BeverageName: "Fanta", Price: 1000, Count: 20),
+                     Beverage(BeverageName: "Cider", Price: 1200, Count: 20),
+                     Beverage(BeverageName: "Ambasa", Price: 1200, Count: 20),
+                     Beverage(BeverageName: "SikHye", Price: 1400, Count: 20),
+                     Beverage(BeverageName: "PowerPoint",Price: 3000, Count: 20),
+                     Beverage(BeverageName: "Excel",Price: 9000, Count: 20),
+                     Beverage(BeverageName: "Access", Price: 9000, Count: 20),
+                    ]
  
     func stockCheck() {
-        print("\(beverage1.beverageName)\(beverage1.count)")
-        print("\(beverage2.beverageName)\(beverage1.count)")
-        print("\(beverage3.beverageName)\(beverage1.count)")
-        print("\(beverage4.beverageName)\(beverage1.count)")
-        print("\(beverage5.beverageName)\(beverage1.count)")
-        print("\(beverage6.beverageName)\(beverage1.count)")
-        print("\(beverage7.beverageName)\(beverage1.count)")
-        print("\(beverage8.beverageName)\(beverage1.count)")
+        for i in 1...7 {
+            print("\(beverages[i].beverageName)는 \(beverages[i].count)개 남았습니다.")
+        }
+    }
+    mutating func moneyMinus(Amount: Int) {
+        initialMoney -= Amount
+    }
+    mutating func moneyPlus(Amount: Int){
+        initialMoney += Amount
     }
 }

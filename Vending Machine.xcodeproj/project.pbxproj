@@ -14,8 +14,6 @@
 		882E4FCC24D29AC1009DF16B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882E4FCB24D29AC1009DF16B /* Assets.xcassets */; };
 		882E4FCF24D29AC1009DF16B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882E4FCD24D29AC1009DF16B /* LaunchScreen.storyboard */; };
 		882E4FFD24D2ABD4009DF16B /* BeverageStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882E4FFC24D2ABD4009DF16B /* BeverageStock.swift */; };
-		882E500024D2B295009DF16B /* MoneyStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882E4FFF24D2B295009DF16B /* MoneyStock.swift */; };
-		882E500324D2BC81009DF16B /* InitialMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882E500224D2BC81009DF16B /* InitialMoney.swift */; };
 		882E500624D2CEC6009DF16B /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882E500524D2CEC6009DF16B /* Beverage.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,8 +27,6 @@
 		882E4FCE24D29AC1009DF16B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		882E4FD024D29AC1009DF16B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		882E4FFC24D2ABD4009DF16B /* BeverageStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageStock.swift; sourceTree = "<group>"; };
-		882E4FFF24D2B295009DF16B /* MoneyStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyStock.swift; sourceTree = "<group>"; };
-		882E500224D2BC81009DF16B /* InitialMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMoney.swift; sourceTree = "<group>"; };
 		882E500524D2CEC6009DF16B /* Beverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,9 +60,9 @@
 		882E4FC124D29AC0009DF16B /* Vending Machine */ = {
 			isa = PBXGroup;
 			children = (
-				882E500424D2BEBE009DF16B /* Controller */,
 				882E500124D2B3B5009DF16B /* View */,
 				882E4FFE24D2B279009DF16B /* Model */,
+				882E500424D2BEBE009DF16B /* Controller */,
 				882E4FC224D29AC0009DF16B /* AppDelegate.swift */,
 				882E4FC424D29AC0009DF16B /* SceneDelegate.swift */,
 				882E4FCB24D29AC1009DF16B /* Assets.xcassets */,
@@ -80,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				882E4FFC24D2ABD4009DF16B /* BeverageStock.swift */,
-				882E4FFF24D2B295009DF16B /* MoneyStock.swift */,
-				882E500224D2BC81009DF16B /* InitialMoney.swift */,
 				882E500524D2CEC6009DF16B /* Beverage.swift */,
 			);
 			path = Model;
@@ -178,8 +172,6 @@
 				882E4FC324D29AC0009DF16B /* AppDelegate.swift in Sources */,
 				882E4FC524D29AC0009DF16B /* SceneDelegate.swift in Sources */,
 				882E4FFD24D2ABD4009DF16B /* BeverageStock.swift in Sources */,
-				882E500024D2B295009DF16B /* MoneyStock.swift in Sources */,
-				882E500324D2BC81009DF16B /* InitialMoney.swift in Sources */,
 				882E500624D2CEC6009DF16B /* Beverage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
