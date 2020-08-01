@@ -9,13 +9,15 @@
 import Foundation
 
 struct Beverage {
-    var beverageName: String
-    var price: Int
-    var count: Int
+    let beverageID: Int
+    let beverageName:String
+    let price:Int
+    var count:Int
     
-    init(BeverageName: String, Price: Int, Count: Int){
-        self.beverageName = BeverageName
-        self.price = Price
-        self.count = Count
+    init(beverageID: Int, beverageName:String, price:Int, count:Int){
+        self.beverageID = beverageID
+        self.beverageName = beverageName
+        self.price = price
+        self.count = count
     }
 }
