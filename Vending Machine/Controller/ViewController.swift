@@ -71,6 +71,28 @@ class ViewController: UIViewController {
                     }
             }
     }
+    //random button 구현하기
+    @IBAction func btn8Selected(_ sender: UIButton) {
+        //0부터 괄호 안 숫자까지 랜덤으로 뽑기 Int형으로 형분할해야함
+      let randomNumber = Int(arc4random_uniform(7))
+        let name = beverageStock.beverages[randomNumber].beverageName
+        let price = 2000
+        
+        let beverageId = beverageStock.getBeverageID(beverageName: name)
+        if moneyInserted - totalPriceAmount >= price {
+                if beverageStock.beverages[beverageId].count < 1 {
+                      print("품절항목입니다.")
+                  } else if beverageStock.beverages[beverageId].count >= 1 {
+                      totalPriceAmount = totalPriceAmount + price
+                      changeLbl.text = String(totalPriceAmount)
+                      print("\(name)이(가) 나왔습니다")
+                      beverageStock.stockMinus(beverageID:beverageId)
+                      beverageStock.stockCheck(beverageID:beverageId)
+                    }
+                }
+        }
+    
+    
     
     func setupViewComponents() {
         selectBtn1.setTitle("\(beverageStock.beverages[0].beverageName):\(beverageStock.beverages[0].price)", for: .normal)
@@ -80,7 +102,7 @@ class ViewController: UIViewController {
         selectBtn5.setTitle("\(beverageStock.beverages[4].beverageName):\(beverageStock.beverages[4].price)", for: .normal)
         selectBtn6.setTitle("\(beverageStock.beverages[5].beverageName):\(beverageStock.beverages[5].price)", for: .normal)
         selectBtn7.setTitle("\(beverageStock.beverages[6].beverageName):\(beverageStock.beverages[6].price)", for: .normal)
-        selectBtn8.setTitle("랜덤:2000", for: .normal)
+        selectBtn8.setTitle("\(beverageStock.beverages[7].beverageName):\(beverageStock.beverages[7].price)", for: .normal)
     }
 }
 

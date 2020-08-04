@@ -11,24 +11,25 @@ import Foundation
 struct BeverageStock {
     var initialMoney:Int = 1000000
     
-    var beverages:Array = [Beverage(beverageID: 0, beverageName: "Cola", price: 1000, count: 20),
-                           Beverage(beverageID: 1, beverageName: "Fanta", price: 1000, count: 20),
-                           Beverage(beverageID: 2, beverageName: "Cider", price: 1200, count: 20),
-                           Beverage(beverageID: 3, beverageName: "Ambasa", price: 1200, count: 20),
-                           Beverage(beverageID: 4, beverageName: "SikHye", price: 1400, count: 20),
-                           Beverage(beverageID: 5, beverageName: "PowerPoint", price: 3000, count: 20),
-                           Beverage(beverageID: 6, beverageName: "Excel", price: 9000, count: 20),
-                           Beverage(beverageID: 7, beverageName: "Access", price: 9000, count: 20),
-                           ]
+    var beverages:Array = [Beverage(beverageName: "Cola", price: 1000, count: 20),
+                           Beverage(beverageName: "Fanta", price: 1000, count: 20),
+                           Beverage(beverageName: "Cider", price: 1200, count: 20),
+                           Beverage(beverageName: "Ambasa", price: 1200, count: 20),
+                           Beverage(beverageName: "SikHye", price: 1400, count: 20),
+                           Beverage(beverageName: "PowerPoint", price: 3000, count: 20),
+                           Beverage(beverageName: "Excel", price: 9000, count: 20),
+                           Beverage(beverageName: "Random", price: 2000, count: 0),]
    
+    //beverageID를 Beverage에서 구현할 필요가 없었음.
     func getBeverageID(beverageName: String) -> Int {
-        var beverageID:Int = 0
+        var beverageId:Int = 0
         for i in 0...beverages.count - 1 {
             if beverageName == beverages[i].beverageName {
-                beverageID = beverages[i].beverageID
+                beverageId = i
+                break;
             }
         }
-        return beverageID
+        return beverageId
     }
     
     mutating func stockMinus(beverageID: Int) {
@@ -36,7 +37,7 @@ struct BeverageStock {
     }
     
     func stockCheck(beverageID: Int) {
-        print("기기에 \(beverages[beverageID].beverageName)는 \(beverages[beverageID].count)개 남았습니다.")
+        print("기기에 \(beverages[beverageID].beverageName)(은)는 \(beverages[beverageID].count)개 남았습니다.")
     }
 
     mutating func moneyMinus(Amount:Int) {

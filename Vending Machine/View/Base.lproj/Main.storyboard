@@ -147,7 +147,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="beverageSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJx-eQ-tdE"/>
+                                            <action selector="btn8Selected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ON9-SP-QI7"/>
                                         </connections>
                                     </button>
                                 </subviews>
